@@ -1,0 +1,31 @@
+body {margin: 0px;}
+#leftbar {
+    position: fixed;
+    top: 0px;
+    width: 10%;
+    height: 100%;
+    background-color: lightgreen;
+}
+#leftbar a {
+    position: fixed;
+    background-color: limegreen;
+    text-decoration: none;
+    font-size: 190%;
+    width: 10%;
+    height: 50px;
+    color: white;
+    font-family: sans-serif;
+}
+#leftbar a:hover {
+    background-color: green;
+}
+#page {
+    position: fixed;
+    margin-top: 17px;
+    left: 11%;
+    width: 84%;
+    height: 100%;
+    padding: 20px;
+    border: solid 5px deepskyblue;
+    border-radius: 20px;
+}

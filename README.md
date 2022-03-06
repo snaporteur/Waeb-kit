@@ -8,5 +8,3 @@ Waeb-kit est un systeme de création de sites internet facile sur n'importe quel
 
 2) Déplacer le fichier sur votre serveur via [FileZilla (recommander)](https://download.filezilla-project.org/client/FileZilla_3.58.0_win64_sponsored2-setup.exe) ou autre
 3. Aller sur votre serveur et compléter les info
-
-

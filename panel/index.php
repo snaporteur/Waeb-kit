@@ -16,8 +16,8 @@
 </head>
 <body>
     <div id="leftbar">
-        <a href="">menu</a><br>
-        <a href="config.php" style="top: 52px;">configurer</a><br>
+        <a href="?p=1">menu</a><br>
+        <a href="?p=2" style="top: 52px;">configurer</a><br>
         <a href="file.php" style="top: 104px;">fichier</a>
     </div>
     <div id="page">

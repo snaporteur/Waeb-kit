@@ -36,3 +36,12 @@ body {margin: 0px;}
     background-color: greenyellow;
     border-radius: 20px;
 }
+
+/* Style de page */
+
+#view {
+    position: fixed;
+    border: 20px solid gray;
+    height: 95%;
+    width: 55%;
+}

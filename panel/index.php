@@ -19,6 +19,7 @@
         <a href="?p=1">menu</a><br>
         <a href="?p=2" style="top: 52px;">configurer</a><br>
         <a href="?p=3" style="top: 104px;">paragraphe</a>
+        <a href="?p=4" style="top: 156px;">theme</a>
     </div>
     <div id="page">
         <?php if($_GET["p"] == "1") { ?>
@@ -31,22 +32,17 @@
             <span>Changer le nom du sites : </span>
             <input type="text" name="namesites" placeholder="<?=$result["name"] ?>"><br>
             <span>Changer la description : </span><br>
-            <textarea name="descriptionsites" cols="50" rows="3"><?=$result["description"] ?></textarea>
+            <textarea name="descriptionsites" cols="50" rows="3"><?=$result["description"] ?></textarea><br>
             <input id="settings-submit" type="submit" value="Sauvegarder">
         </form>
-        <?php 
-            }elseif($_GET["p"] == "3") { 
-                ?><form action="" method="post"><?php
-                for ($i=1; $i < $result["number_paragraphe"] + 1; $i++) { 
-                    $q_paragraphe = $db->prepare("SELECT `text` FROM `paragraphe` WHERE id = :id");
-                    $q_paragraphe->execute(["id" => $i]);
-                    $result_paragraphe = $q_paragraphe->fetch();
-                    echo "<textarea name='$i'>";
-                    echo $result_paragraphe["text"];
-                    echo "</textarea><br>";
-                }
-            }
-        ?></form>
+        <?php }elseif($_GET["p"] == "3") { ?>
+            <div id="view">
+
+            </div>
+            <div id="hirachie">
+
+            </div>
+        <?php } ?>
     </div>
 </body>
 </html>

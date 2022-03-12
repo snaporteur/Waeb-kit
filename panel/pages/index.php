@@ -1,4 +1,4 @@
-<?php include 'databases.php';
+<?php include '../../databases.php';
     global $db;
     $q = $db->prepare("SELECT * FROM `sites-info`");
     $q->execute();
@@ -28,6 +28,8 @@
             position: fixed;
             top: 50%;
             width: 100%;
+            margin-top: 10px;
+            background-color: rgb(176, 175, 175);
         }
     </style>
     <title>acceuil - <?=$result["name"] ?></title>
@@ -41,12 +43,15 @@
         <?php
             for ($i = 1; $i <= $result["count_paragraphe"]; $i++) {
                 global $db;
-                $q_paragraphe = $db->prepare("SELECT `text` FROM `paragraphe` WHERE id = :id;");
+                $q_paragraphe = $db->prepare("SELECT * FROM `paragraphe` WHERE id = :id;");
                 $q_paragraphe->execute(["id" => $i]);
                 $result_paragraphe = $q_paragraphe->fetch();
-                echo("<div id=" + (string)$result_paragraphe + "></div>");
+                ?><div class="<?=$result_paragraphe["id"] ?>" id="paragraphe">
+            <h3><?=$result_paragraphe["name"] ?></h3>
+            <p><?=$result_paragraphe["text"] ?></p>
+        </div><?php
             }
-        ?>
+        echo "\n";?>
     </div>
 </body>
 </html>
